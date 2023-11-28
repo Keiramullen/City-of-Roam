@@ -24,6 +24,7 @@ public class InvincibilityPowerUp : PowerUpBase
         if(Time.time - startTime > time)
         {
             playerCollider.enabled = true;
+            Destroy(gameObject);
         }
     }
 }
