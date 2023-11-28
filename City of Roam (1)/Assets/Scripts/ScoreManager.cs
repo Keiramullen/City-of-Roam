@@ -1,18 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Text scoreText;
+    private Text highscoreText;
+
+    public float score;
+    public float highscore;
+    public float scoreIncreasePerSecond;
+    
+
     void Start()
     {
+        score = 0f;
+        highscore = PlayerPrefs.GetInt("Highscore", 0);
+        scoreIncreasePerSecond = 10f;
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddPoint()
     {
-        
+        scoreText.text = "Score: " + score.ToString();
+        highscoreText.text = "Highscore: " + highscore.ToString();
+        score += scoreIncreasePerSecond * Time.deltaTime;
+        if(score > highscore)
+        {
+            highscore = score;
+            PlayerPrefs.SetInt("Highscore", (int)highscore);
+        }
     }
 }
