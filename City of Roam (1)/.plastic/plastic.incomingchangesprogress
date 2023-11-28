@@ -2,10 +2,10 @@
   {
     "MountId": "56e62dd7-241f-41e9-8c6b-dd4ca4513e62",
     "AncestorCsetIds": [
-      12
+      14
     ],
-    "SourceCsetId": 14,
-    "DestinationCsetId": 12,
+    "SourceCsetId": 15,
+    "DestinationCsetId": 14,
     "FileConflicts": [
       {
         "Path": "/Assets/Scripts/ScoreManager.cs",
