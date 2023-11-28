@@ -10,6 +10,8 @@ public class ScoreManager : MonoBehaviour
 
     public float score;
     public float highscore;
+    
+    [SerializeField]
     public float scoreIncreasePerSecond;
     
 
@@ -21,11 +23,16 @@ public class ScoreManager : MonoBehaviour
         
     }
 
-    public void AddPoint()
+    public void AddScore()
+    {
+        score += scoreIncreasePerSecond * Time.deltaTime;
+    }
+
+    void Update()
     {
         scoreText.text = "Score: " + score.ToString();
         highscoreText.text = "Highscore: " + highscore.ToString();
-        score += scoreIncreasePerSecond * Time.deltaTime;
+        AddScore();
         if(score > highscore)
         {
             highscore = score;
