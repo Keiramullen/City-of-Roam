@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody2D rb;
@@ -20,17 +20,16 @@ public class Player : MonoBehaviour
     private Vector3 ApplyMove;
 
     [SerializeField]
-    private Text scoreDisplay;
+    public Collider2D triggerCollider;
 
-    private int score;
+    [SerializeField]
+    private int invulTime;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = 100;
-        score = 0;
-        scoreDisplay.text = score.ToString();
     }
 
     // Update is called once per frame
@@ -56,6 +55,12 @@ public class Player : MonoBehaviour
         ApplyMove = Vector3.zero;
     }
 
+    public IEnumerator iFrames()
+    {
+        triggerCollider.enabled = false;
+        yield return new WaitForSeconds(invulTime);
+        triggerCollider.enabled = true;
+    }
     public void TakeDamage(float health)
     {
         currentHealth -= health;
@@ -65,25 +70,36 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void AddHealth(float health)
+    {
+        currentHealth += health;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             TakeDamage(10);
+            iFrames();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Score")
+        PlayerController player = collision.GetComponent<PlayerController>();
+        if (player != null)
         {
-            score += 10;
-            scoreDisplay.text = score.ToString();
-        }
+            //if (collision.tag == "Score")
+            //{
+                //score += 10;
+                //scoreDisplay.text = score.ToString();
+            //}
 
-        if (collision.tag == "Enemy")
-        {
-            TakeDamage(10);
+            if (collision.tag == "Enemy")
+            {
+                TakeDamage(10);
+                iFrames();
+            }
         }
     }
 }
