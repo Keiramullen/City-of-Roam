@@ -249,3 +249,20 @@ Received Import Request.
 Start importing Assets/Scenes/Khanh/medkit_.png using Guid(ec75c8eff23c38e4ba0a5800004db849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0e9bfeb809dcf4b0fe7e548efb26487') in 0.016016 seconds 
   Import took 0.019498 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 435.333503 seconds.
+  path: Assets/Scenes/City of Roam Background.mdp
+  artifactKey: Guid(92bb6c147a6cb90478258ff05c2d7038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/City of Roam Background.mdp using Guid(92bb6c147a6cb90478258ff05c2d7038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea1bf860c1a30396711f9dee46f1a26') in 0.010600 seconds 
+  Import took 0.014468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009356 seconds.
+  path: Assets/Scenes/City of Roam Background.mdp
+  artifactKey: Guid(92bb6c147a6cb90478258ff05c2d7038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/City of Roam Background.mdp using Guid(92bb6c147a6cb90478258ff05c2d7038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea1bf860c1a30396711f9dee46f1a26') in 0.002723 seconds 
+  Import took 0.005093 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
