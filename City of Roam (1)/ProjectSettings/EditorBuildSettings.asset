@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Start Menu.unity
+    guid: 74cd5d49d31901f438b568ca7f1dd920
+  - enabled: 1
+    path: Assets/Scenes/City of Roam (1).unity
+    guid: 1424ab3f3534b5c42bc858354a671f73
   m_configObjects: {}
