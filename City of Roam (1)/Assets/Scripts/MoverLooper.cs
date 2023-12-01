@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoverLooper : MonoBehaviour
 {
-
     [SerializeField]
     private int moveSpeed;
     [SerializeField]
@@ -15,10 +14,9 @@ public class MoverLooper : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
-    
     }
 
-   
+    // Update is called once per frame
     void Update()
     {
         transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0f, 0f);
