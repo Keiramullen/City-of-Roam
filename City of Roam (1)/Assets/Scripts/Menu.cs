@@ -7,14 +7,14 @@ public class Menu : MonoBehaviour
     public void Awake()
     {
  
-        GameStateManager.onGameOver += Open;
+        GameStateManager.OnGameOver += Open;
 
         gameObject.SetActive(false);
     }
 
     public void OnDestroy()
     {
-        GameStateManager.onGameOver -= Open;
+        GameStateManager.OnGameOver -= Open;
     }
     private void Open()
     {

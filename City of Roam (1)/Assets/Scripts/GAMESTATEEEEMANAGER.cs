@@ -141,7 +141,7 @@ public class GameStateManager : MonoBehaviour
         }
 		else
         {
-            //if (OnLoseHealth != null)
+            if (OnLoseHealth != null)
             {
 				_instance.StartCoroutine(_instance.LoseHealthRoutine(m_CurrentHealth));
 

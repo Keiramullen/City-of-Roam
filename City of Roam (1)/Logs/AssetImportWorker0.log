@@ -362,3 +362,11 @@ Received Import Request.
 Start importing Assets/Scripts/RandomPowerUpSpawner.cs using Guid(d85008b355e5fec49820be5d44bbf81a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9034826a072abd1df8172b04028bff66') in 0.024636 seconds 
   Import took 0.031778 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 1205.835912 seconds.
+  path: Assets/Scripts/SoundManager.cs
+  artifactKey: Guid(911aa9b61517fee4e8d24eaa2e5941b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SoundManager.cs using Guid(911aa9b61517fee4e8d24eaa2e5941b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a577e7771951bef8e804ff3ca5a45b95') in 0.004771 seconds 
+  Import took 0.011349 seconds .
+
