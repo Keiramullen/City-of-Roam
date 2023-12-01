@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SoundManager : Monobehaviour
+public class SoundManager : MonoBehaviour
 {
 	[SerializeField]
 	private AudioSource m_SFXAudioSource;
